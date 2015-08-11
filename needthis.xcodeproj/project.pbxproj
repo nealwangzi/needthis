@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		114542C91B7A077E0053FCEC /* AppSecrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114542C81B7A077E0053FCEC /* AppSecrets.swift */; };
 		11BE60E81B79E18100E3855A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BE60E71B79E18100E3855A /* AppDelegate.swift */; };
 		11BE60EB1B79E18100E3855A /* needthis.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11BE60E91B79E18100E3855A /* needthis.xcdatamodeld */; };
 		11BE60ED1B79E18100E3855A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BE60EC1B79E18100E3855A /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		114542C81B7A077E0053FCEC /* AppSecrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppSecrets.swift; path = models/AppSecrets.swift; sourceTree = "<group>"; };
 		11BE60E21B79E18100E3855A /* needthis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = needthis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11BE60E61B79E18100E3855A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11BE60E71B79E18100E3855A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				11BE60E71B79E18100E3855A /* AppDelegate.swift */,
 				11BE60EC1B79E18100E3855A /* ViewController.swift */,
 				11BE60EE1B79E18100E3855A /* Main.storyboard */,
+				114542C81B7A077E0053FCEC /* AppSecrets.swift */,
 				11BE60F11B79E18100E3855A /* Images.xcassets */,
 				11BE60F31B79E18100E3855A /* LaunchScreen.xib */,
 				11BE60E91B79E18100E3855A /* needthis.xcdatamodeld */,
@@ -186,6 +189,7 @@
 		11BE60DA1B79E18100E3855A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = ONTHETALL;
 				TargetAttributes = {
@@ -291,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11BE60ED1B79E18100E3855A /* ViewController.swift in Sources */,
+				114542C91B7A077E0053FCEC /* AppSecrets.swift in Sources */,
 				11BE60E81B79E18100E3855A /* AppDelegate.swift in Sources */,
 				11BE60EB1B79E18100E3855A /* needthis.xcdatamodeld in Sources */,
 			);
