@@ -44,11 +44,14 @@ class ViewController: UIViewController {
         
         Alamofire.request(.POST, request_url, parameters: request_params, encoding: .JSON, headers: headers)
             .responseJSON { request, response, JSON, error in
-                println("request: \(request)")
-                println("response \(response)")
+//                println("request: \(request)")
+//                println("response \(response)")
                 println("json: \(JSON)")
                 println("error: \(error)")
-                println("response: \(response)")
+                
+                if let charge_json = JSON {
+                    // Pingpp.createPayment......
+                }
         }
     }
     

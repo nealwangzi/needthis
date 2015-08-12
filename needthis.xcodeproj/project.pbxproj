@@ -15,6 +15,12 @@
 		11BE60F21B79E18100E3855A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11BE60F11B79E18100E3855A /* Images.xcassets */; };
 		11BE60F51B79E18100E3855A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11BE60F31B79E18100E3855A /* LaunchScreen.xib */; };
 		11BE61011B79E18100E3855A /* needthisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BE61001B79E18100E3855A /* needthisTests.swift */; };
+		11C878FC1B7ADAFD00BF4450 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C878FB1B7ADAFD00BF4450 /* CFNetwork.framework */; };
+		11C878FE1B7ADB0400BF4450 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C878FD1B7ADB0400BF4450 /* SystemConfiguration.framework */; };
+		11C879001B7ADB0A00BF4450 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C878FF1B7ADB0A00BF4450 /* Security.framework */; };
+		11C879021B7ADB1000BF4450 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C879011B7ADB1000BF4450 /* libc++.dylib */; };
+		11C879041B7ADB1500BF4450 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C879031B7ADB1500BF4450 /* libz.dylib */; };
+		11C879061B7ADB1B00BF4450 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C879051B7ADB1B00BF4450 /* libsqlite3.0.dylib */; };
 		EE23387FDAA498D267C62D3B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52564AB9E09E60E6263BB080 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -41,6 +47,14 @@
 		11BE60FA1B79E18100E3855A /* needthisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = needthisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11BE60FF1B79E18100E3855A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11BE61001B79E18100E3855A /* needthisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = needthisTests.swift; sourceTree = "<group>"; };
+		11C878F61B7AD9C000BF4450 /* needthis-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "needthis-Bridging-Header.h"; sourceTree = "<group>"; };
+		11C878F91B7ADAF700BF4450 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		11C878FB1B7ADAFD00BF4450 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		11C878FD1B7ADB0400BF4450 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		11C878FF1B7ADB0A00BF4450 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		11C879011B7ADB1000BF4450 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		11C879031B7ADB1500BF4450 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		11C879051B7ADB1B00BF4450 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		1B3628E07F280D12FC884167 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		266C6FB979160E3F93C342C3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		52564AB9E09E60E6263BB080 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +65,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11C879061B7ADB1B00BF4450 /* libsqlite3.0.dylib in Frameworks */,
+				11C879041B7ADB1500BF4450 /* libz.dylib in Frameworks */,
+				11C879021B7ADB1000BF4450 /* libc++.dylib in Frameworks */,
+				11C879001B7ADB0A00BF4450 /* Security.framework in Frameworks */,
+				11C878FE1B7ADB0400BF4450 /* SystemConfiguration.framework in Frameworks */,
+				11C878FC1B7ADAFD00BF4450 /* CFNetwork.framework in Frameworks */,
 				EE23387FDAA498D267C62D3B /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +88,13 @@
 		11023BA6BF7AFC8C49F233F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11C879051B7ADB1B00BF4450 /* libsqlite3.0.dylib */,
+				11C879031B7ADB1500BF4450 /* libz.dylib */,
+				11C879011B7ADB1000BF4450 /* libc++.dylib */,
+				11C878FF1B7ADB0A00BF4450 /* Security.framework */,
+				11C878FD1B7ADB0400BF4450 /* SystemConfiguration.framework */,
+				11C878FB1B7ADAFD00BF4450 /* CFNetwork.framework */,
+				11C878F91B7ADAF700BF4450 /* libstdc++.dylib */,
 				52564AB9E09E60E6263BB080 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -104,6 +131,7 @@
 				11BE60F31B79E18100E3855A /* LaunchScreen.xib */,
 				11BE60E91B79E18100E3855A /* needthis.xcdatamodeld */,
 				11BE60E51B79E18100E3855A /* Supporting Files */,
+				11C878F61B7AD9C000BF4450 /* needthis-Bridging-Header.h */,
 			);
 			path = needthis;
 			sourceTree = "<group>";
@@ -427,9 +455,12 @@
 			baseConfigurationReference = 266C6FB979160E3F93C342C3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = needthis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "needthis/needthis-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -438,9 +469,11 @@
 			baseConfigurationReference = 1B3628E07F280D12FC884167 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = needthis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "needthis/needthis-Bridging-Header.h";
 			};
 			name = Release;
 		};
