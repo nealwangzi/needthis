@@ -19,5 +19,6 @@ struct AppSecrets {
     static let APP_APPLE_ID = "967592766"
     #endif
     
+    static let PINGPP_URL_SCHEME = "onthetallneedthispingpp"
 
 }

@@ -46,7 +46,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - URL schemes
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-        //Pingpp.handleOpenUrl....
+        // TODO: Pingpp.handleOpenUrl....
+        return false
     }
     
     // MARK: - Core Data stack

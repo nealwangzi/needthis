@@ -49,8 +49,15 @@ class ViewController: UIViewController {
                 println("json: \(JSON)")
                 println("error: \(error)")
                 
-                if let charge_json = JSON {
-                    // Pingpp.createPayment......
+                if let charge_json = JSON as? NSObject {
+                    // TODO: Pingpp.createPayment......
+                    Pingpp.createPayment(charge_json, appURLScheme: AppSecrets.PINGPP_URL_SCHEME, withCompletion: { (result, error) -> Void in
+                        println("[Pingpp] result: \(result)")
+                        if error != nil {
+                            println("[Pingpp error]\(error.code.rawValue)")
+                            println("[Pingpp error]\(error.getMsg())")
+                        }
+                    })
                 }
         }
     }
