@@ -10,6 +10,10 @@
 		114542C91B7A077E0053FCEC /* AppSecrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114542C81B7A077E0053FCEC /* AppSecrets.swift */; };
 		11A63FAE1B7D95FC0008A7CA /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11A63FAA1B7D95FC0008A7CA /* SMS_SDKLocalizable.strings */; };
 		11A63FAF1B7D95FC0008A7CA /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A63FAC1B7D95FC0008A7CA /* SMS_SDK.framework */; };
+		11A63FB11B7D977C0008A7CA /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A63FB01B7D977C0008A7CA /* libicucore.dylib */; };
+		11A63FB21B7D97830008A7CA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C879831B7BA28400BF4450 /* MessageUI.framework */; };
+		11A63FB31B7D978C0008A7CA /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C879751B7BA24B00BF4450 /* AddressBook.framework */; };
+		11A63FB41B7D97920008A7CA /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C879771B7BA25100BF4450 /* AddressBookUI.framework */; };
 		11BE60E81B79E18100E3855A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BE60E71B79E18100E3855A /* AppDelegate.swift */; };
 		11BE60EB1B79E18100E3855A /* needthis.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11BE60E91B79E18100E3855A /* needthis.xcdatamodeld */; };
 		11BE60ED1B79E18100E3855A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BE60EC1B79E18100E3855A /* ViewController.swift */; };
@@ -49,6 +53,7 @@
 		11A63FAB1B7D95FC0008A7CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
 		11A63FAC1B7D95FC0008A7CA /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
 		11A63FAD1B7D95FC0008A7CA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SMS_SDKLocalizable.strings"; sourceTree = "<group>"; };
+		11A63FB01B7D977C0008A7CA /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		11BE60E21B79E18100E3855A /* needthis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = needthis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11BE60E61B79E18100E3855A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11BE60E71B79E18100E3855A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +107,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11A63FB41B7D97920008A7CA /* AddressBookUI.framework in Frameworks */,
+				11A63FB31B7D978C0008A7CA /* AddressBook.framework in Frameworks */,
+				11A63FB21B7D97830008A7CA /* MessageUI.framework in Frameworks */,
+				11A63FB11B7D977C0008A7CA /* libicucore.dylib in Frameworks */,
 				11C8790A1B7B26FB00BF4450 /* Alamofire.framework in Frameworks */,
 				11C879DB1B7BAF4800BF4450 /* libpingpp+alipay.a in Frameworks */,
 				11C879061B7ADB1B00BF4450 /* libsqlite3.0.dylib in Frameworks */,
@@ -132,6 +141,7 @@
 		11023BA6BF7AFC8C49F233F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11A63FB01B7D977C0008A7CA /* libicucore.dylib */,
 				11C879891B7BA29B00BF4450 /* PassKit.framework */,
 				11C879871B7BA29400BF4450 /* QuartzCore.framework */,
 				11C879851B7BA28E00BF4450 /* MobileCoreServices.framework */,
