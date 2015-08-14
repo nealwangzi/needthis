@@ -17,6 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // pingpp debug
+        Pingpp.setDebugMode(true)
+        
+        // sms verification
+        SMS_SDK.registerApp(AppSecrets.MOB_SMS_APP_KEY, withSecret: AppSecrets.MOB_SMS_APP_SECRET)
+        
         return true
     }
 
