@@ -13,6 +13,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var payButton: UIButton!
     
+    @IBOutlet var phoneNumber: UITextField!
+    @IBOutlet var SMSBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -62,6 +65,39 @@ class ViewController: UIViewController {
         }
     }
     
+    //发送验证码
+    @IBAction func SMS(sender: AnyObject) {
+        
+        self.SMSBtn.userInteractionEnabled = false
+        self.SMSBtn.setTitle("等待验证码", forState:UIControlState.Normal)
+        self.SMSBtn.setTitleColor(UIColor.grayColor(),forState:.Normal)
+        
+        SMS_SDK.getVerificationCodeBySMSWithPhone(self.phoneNumber.text, zone: "86", result: {(error) in
+            
+            if (error != nil)
+            {
+                println("获取验证码失败，错误描述: \(error.errorDescription)")
+                println("获取验证码失败，状态: \(error.errorCode)")
+            
+            }else{
+                println("获取验证码成功")
+            }
+            
+        })
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
