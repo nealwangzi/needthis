@@ -35,6 +35,9 @@
 		11C879F81B7BAF4800BF4450 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C879D31B7BAF4800BF4450 /* libWeChatSDK.a */; };
 		11C879F91B7BAF4800BF4450 /* libpingpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C879D61B7BAF4800BF4450 /* libpingpp.a */; };
 		11C879FA1B7BAF4800BF4450 /* Pingpp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 11C879D71B7BAF4800BF4450 /* Pingpp.bundle */; };
+		CF3130851B84229F008D943D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = CF3130841B84229F008D943D /* README.md */; };
+		CF31308B1B84566C008D943D /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3130881B84566C008D943D /* libWeChatSDK.a */; };
+		CF31308C1B84566C008D943D /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF3130881B84566C008D943D /* libWeChatSDK.a */; };
 		EE23387FDAA498D267C62D3B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52564AB9E09E60E6263BB080 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -100,6 +103,10 @@
 		1B3628E07F280D12FC884167 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		266C6FB979160E3F93C342C3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		52564AB9E09E60E6263BB080 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF3130841B84229F008D943D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		CF3130881B84566C008D943D /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = ../../Desktop/WeChatSDK_1.5/WeChatSDK_1.5/libWeChatSDK.a; sourceTree = "<group>"; };
+		CF3130891B84566C008D943D /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXApi.h; path = ../../Desktop/WeChatSDK_1.5/WeChatSDK_1.5/WXApi.h; sourceTree = "<group>"; };
+		CF31308A1B84566C008D943D /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = ../../Desktop/WeChatSDK_1.5/WeChatSDK_1.5/WXApiObject.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +126,7 @@
 				11C879F71B7BAF4800BF4450 /* libpingpp+wx.a in Frameworks */,
 				11C879001B7ADB0A00BF4450 /* Security.framework in Frameworks */,
 				11C878FE1B7ADB0400BF4450 /* SystemConfiguration.framework in Frameworks */,
+				CF31308B1B84566C008D943D /* libWeChatSDK.a in Frameworks */,
 				11C879F81B7BAF4800BF4450 /* libWeChatSDK.a in Frameworks */,
 				11C878FC1B7ADAFD00BF4450 /* CFNetwork.framework in Frameworks */,
 				EE23387FDAA498D267C62D3B /* Pods.framework in Frameworks */,
@@ -132,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF31308C1B84566C008D943D /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +189,7 @@
 		11BE60D91B79E18100E3855A = {
 			isa = PBXGroup;
 			children = (
+				CF3130841B84229F008D943D /* README.md */,
 				11C8790B1B7BA1D500BF4450 /* Vendor */,
 				11BE60E41B79E18100E3855A /* needthis */,
 				11BE60FD1B79E18100E3855A /* needthisTests */,
@@ -242,6 +252,7 @@
 		11C8790B1B7BA1D500BF4450 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				CF31308D1B845671008D943D /* weChat */,
 				11A63FA91B7D95FC0008A7CA /* mob_sms */,
 				11C879951B7BAF4800BF4450 /* pingpp */,
 			);
@@ -296,6 +307,16 @@
 				1B3628E07F280D12FC884167 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF31308D1B845671008D943D /* weChat */ = {
+			isa = PBXGroup;
+			children = (
+				CF3130881B84566C008D943D /* libWeChatSDK.a */,
+				CF3130891B84566C008D943D /* WXApi.h */,
+				CF31308A1B84566C008D943D /* WXApiObject.h */,
+			);
+			name = weChat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,6 +477,7 @@
 			files = (
 				11BE60ED1B79E18100E3855A /* ViewController.swift in Sources */,
 				114542C91B7A077E0053FCEC /* AppSecrets.swift in Sources */,
+				CF3130851B84229F008D943D /* README.md in Sources */,
 				11BE60E81B79E18100E3855A /* AppDelegate.swift in Sources */,
 				11BE60EB1B79E18100E3855A /* needthis.xcdatamodeld in Sources */,
 			);
@@ -617,6 +639,7 @@
 					"$(PROJECT_DIR)/Vendor/pingpp/Channels/UnionPay",
 					"$(PROJECT_DIR)/Vendor/pingpp/Channels/Wx",
 					"$(PROJECT_DIR)/Vendor/pingpp",
+					/Users/Fish/Desktop/WeChatSDK_1.5/WeChatSDK_1.5,
 				);
 				MACH_O_TYPE = mh_execute;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -651,6 +674,7 @@
 					"$(PROJECT_DIR)/Vendor/pingpp/Channels/UnionPay",
 					"$(PROJECT_DIR)/Vendor/pingpp/Channels/Wx",
 					"$(PROJECT_DIR)/Vendor/pingpp",
+					/Users/Fish/Desktop/WeChatSDK_1.5/WeChatSDK_1.5,
 				);
 				MACH_O_TYPE = mh_execute;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -672,6 +696,10 @@
 				);
 				INFOPLIST_FILE = needthisTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Fish/Desktop/WeChatSDK_1.5/WeChatSDK_1.5,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/needthis.app/needthis";
 			};
@@ -687,6 +715,10 @@
 				);
 				INFOPLIST_FILE = needthisTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Fish/Desktop/WeChatSDK_1.5/WeChatSDK_1.5,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/needthis.app/needthis";
 			};

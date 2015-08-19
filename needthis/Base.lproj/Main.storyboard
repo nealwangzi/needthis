@@ -45,6 +45,15 @@
                                     <action selector="SMS:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EcP-tV-o65"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSc-Vt-uKl">
+                                <rect key="frame" x="109" y="477" width="93" height="30"/>
+                                <state key="normal" title="微信">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="weChatBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4S1-fu-yUT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

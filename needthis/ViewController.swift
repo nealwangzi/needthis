@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,WXApiDelegate {
 
     @IBOutlet weak var payButton: UIButton!
     
@@ -86,6 +86,22 @@ class ViewController: UIViewController {
         })
     }
 
+    @IBAction func weChatBtn(sender: AnyObject) {
+        
+        if WXApi.isWXAppInstalled() == false {
+            
+            println("没有微信")
+            
+        }else {
+        
+            var req = SendAuthReq()
+            req.scope = "snsapi_userinfo"
+            req.state = "fdf8566e9925ad57fa70dcc639d8b804"
+            
+            WXApi.sendReq(req)
+        }
+    }
+    
 }
 
 
