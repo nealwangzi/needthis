@@ -5,3 +5,5 @@
 #import "Pingpp.h"
 #import <SMS_SDK/SMS_SDK.h>
 #import "WXApi.h"
+#import "UMSocial.h"
+#import "UMSocialWechatHandler.h"

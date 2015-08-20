@@ -27,6 +27,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate {
         // wechat
         WXApi.registerApp("wxcf364e25b0807453")
         
+        // 友盟分享
+        UMSocialData.setAppKey("535e5f0256240baa89078c7f")
+        
+        // 微信分享
+        UMSocialWechatHandler.setWXAppId("wx8839986cd11a188f", appSecret: "d7ae8b659965474b4e5375df995aaea2", url: "http://www.onthetall.com/")
+        
         return true
     }
     
