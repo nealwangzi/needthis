@@ -18,7 +18,6 @@ class ViewController: UIViewController,WXApiDelegate {
     
     @IBOutlet var validationTextField: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -95,7 +94,6 @@ class ViewController: UIViewController,WXApiDelegate {
     @IBAction func validationBtn(sender: AnyObject) {
         SMS_SDK.commitVerifyCode(self.validationTextField.text, result: {(state) in
             
-            
             if state.value == SMS_ResponseStateSuccess.value {
                 
                  println("验证成功: \(state.value)")
@@ -120,6 +118,21 @@ class ViewController: UIViewController,WXApiDelegate {
             req.state = "fdf8566e9925ad57fa70dcc639d8b804"
             
             WXApi.sendReq(req)
+        }
+    }
+    
+    func onResp(resp: BaseResp!) {
+        
+        var resp1 = SendAuthResp()
+        
+        println("+++++: \(resp1.code)")
+        println("+++++: \(resp1.errStr)")
+        println("+++++: \(resp1.type)")
+        
+        
+        Alamofire.request(.GET, "https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code").responseJSON() {
+            (_, _, data, _) in
+            println(data)
         }
     }
     
