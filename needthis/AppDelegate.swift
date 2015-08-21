@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate {
 
     var window: UIWindow?
 
@@ -24,8 +24,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // sms verification
         SMS_SDK.registerApp(AppSecrets.MOB_SMS_APP_KEY, withSecret: AppSecrets.MOB_SMS_APP_SECRET)
         
+        // wechat
+        WXApi.registerApp("wxcf364e25b0807453")
+        
+        // 友盟分享
+        UMSocialData.setAppKey("535e5f0256240baa89078c7f")
+        
+        // 微信分享
+        UMSocialWechatHandler.setWXAppId("wx8839986cd11a188f", appSecret: "d7ae8b659965474b4e5375df995aaea2", url: "http://www.onthetall.com/")
+        
         return true
     }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+        return WXApi.handleOpenURL(url, delegate: self)
+    }
+    
+    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+        return WXApi.handleOpenURL(url, delegate: self)
+    }
+    
+    
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -49,12 +68,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
-    }
-
-    // MARK: - URL schemes
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-        // TODO: Pingpp.handleOpenUrl....
-        return false
     }
     
     // MARK: - Core Data stack

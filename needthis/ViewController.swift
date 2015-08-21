@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,WXApiDelegate {
 
     @IBOutlet weak var payButton: UIButton!
     
@@ -86,6 +86,33 @@ class ViewController: UIViewController {
         })
     }
 
+    @IBAction func weChatBtn(sender: AnyObject) {
+        
+        if WXApi.isWXAppInstalled() == false {
+            
+            println("没有微信")
+            
+        }else {
+        
+            var req = SendAuthReq()
+            req.scope = "snsapi_userinfo"
+            req.state = "fdf8566e9925ad57fa70dcc639d8b804"
+            
+            WXApi.sendReq(req)
+        }
+    }
+    
+    @IBAction func shareBtn(sender: AnyObject) {
+        
+        let ctrlr: UIViewController! = self
+        let shareImage: UIImage! = UIImage(named: "icon")!
+        let shareSnsNames = [UMShareToTencent,UMShareToSina,UMShareToWechatTimeline,UMShareToWechatSession]
+        
+        
+        UMSocialSnsService.presentSnsIconSheetView(ctrlr, appKey: "535e5f0256240baa89078c7f", shareText: "高大象，设计师的家园", shareImage: shareImage, shareToSnsNames: shareSnsNames, delegate: nil)
+        
+        
+    }
 }
 
 

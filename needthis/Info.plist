@@ -21,9 +21,13 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>wechatapi</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>onthetallneedthispingpp</string>
+				<string>wxcf364e25b0807453</string>
 			</array>
 		</dict>
 	</array>
