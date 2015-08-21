@@ -95,7 +95,6 @@ class ViewController: UIViewController,WXApiDelegate {
     @IBAction func validationBtn(sender: AnyObject) {
         SMS_SDK.commitVerifyCode(self.validationTextField.text, result: {(state) in
             
-            
             if state.value == SMS_ResponseStateSuccess.value {
                 
                  println("验证成功: \(state.value)")
