@@ -16,6 +16,9 @@ class ViewController: UIViewController,WXApiDelegate {
     @IBOutlet var phoneNumber: UITextField!
     @IBOutlet var SMSBtn: UIButton!
     
+    @IBOutlet var validationTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,7 +29,9 @@ class ViewController: UIViewController,WXApiDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    // Ping＋＋支付
     @IBAction func didPay(sender: AnyObject) {
+        
         let request_url = "\(AppSecrets.API_URL)/charges"
         
         // charges params
@@ -85,7 +90,23 @@ class ViewController: UIViewController,WXApiDelegate {
             
         })
     }
+    
+    //收到验证码后，提交验证码
+    @IBAction func validationBtn(sender: AnyObject) {
+        SMS_SDK.commitVerifyCode(self.validationTextField.text, result: {(state) in
+            
+            
+            if state.value == SMS_ResponseStateSuccess.value {
+                
+                 println("验证成功: \(state.value)")
+            } else if state.value == SMS_ResponseStateFail.value {
+                
+                 println("验证失败: \(state.value)")
+            }
+        })
+    }
 
+    // wechat 登入
     @IBAction func weChatBtn(sender: AnyObject) {
         
         if WXApi.isWXAppInstalled() == false {
@@ -102,6 +123,7 @@ class ViewController: UIViewController,WXApiDelegate {
         }
     }
     
+    //友盟分享
     @IBAction func shareBtn(sender: AnyObject) {
         
         let ctrlr: UIViewController! = self
